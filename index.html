@@ -119,16 +119,16 @@
         <div class="contact__top">
           <label for="name" class="contact__name">
             <p>Name</p>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" rules="required">
           </label>
           <label for="email" class="contact__email">
             <p>Email</p>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" rules="required | email | max:255">
           </label>
         </div>
         <label for="message" class="contact__message">
           <p>How can I help?</p>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <textarea name="message" id="message" cols="30" rows="10" rules="required"></textarea>
         </label>
         <button type="submit" class="contact__submit">Send</button>
       </form>
