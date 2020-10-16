@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Arvo";
+  src: url(../font/Arvo-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Rakkas";
+  src: url(../font/Rakkas-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
