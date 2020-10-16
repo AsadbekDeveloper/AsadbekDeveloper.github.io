@@ -506,7 +506,7 @@ section {
   }
   .nav {
     position: fixed;
-    z-index: 1;
+    z-index: -1;
   }
   .nav:before, .nav:after {
     content: "";
@@ -593,6 +593,7 @@ section {
   }
   body.nav-active .nav {
     visibility: visible;
+    z-index: 1;
   }
   body.nav-active .nav:before, body.nav-active .nav:after {
     -webkit-transform: translateX(0%) translateY(0%);
