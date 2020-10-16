@@ -1,13 +1,13 @@
 @font-face {
   font-family: "arvoregular";
-  src: url("arvo-regular-webfont.woff2") format("woff2"), url("arvo-regular-webfont.woff") format("woff");
+  src: url("../font/arvo-regular-webfont.woff2") format("woff2"), url("../font/arvo-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "rakkasregular";
-  src: url("rakkas-regular-webfont.woff2") format("woff2"), url("rakkas-regular-webfont.woff") format("woff");
+  src: url("../font/rakkas-regular-webfont.woff2") format("woff2"), url("../font/rakkas-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
