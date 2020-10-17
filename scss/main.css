@@ -29,11 +29,6 @@ body {
   overflow-x: hidden;
 }
 
-.brand {
-  font-size: 35px;
-  font-family: "Dungeon", Arial, Helvetica, sans-serif;
-}
-
 section {
   padding: 0 5% 100px 5%;
   font-size: 20px;
@@ -159,6 +154,11 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.home__logo {
+  width: 150px;
+  padding: 10px;
 }
 
 .home__nav {
@@ -313,6 +313,16 @@ section {
 .about__paragraph::first-letter {
   font-size: 80px;
   color: red;
+}
+
+.about__skills {
+  margin-top: 10px;
+}
+
+.about__skills li {
+  list-style: disc outside;
+  font-family: "arvoregular", Arial, sans-serif;
+  margin-bottom: 10px;
 }
 
 .about__profile img {
@@ -653,14 +663,17 @@ section {
 }
 
 @media (max-width: 600px) {
+  section {
+    font-size: 16px;
+  }
+  .nav__content {
+    font-size: 20px;
+  }
   .home {
     height: auto;
   }
   .home__header {
     height: 46px;
-  }
-  .home__header .brand {
-    font-size: 26px;
   }
   .home__heading {
     font-size: 65px;
@@ -676,6 +689,12 @@ section {
   }
   .home__img {
     position: relative;
+  }
+  .about__paragraph, .about__skills {
+    width: 95%;
+  }
+  .about__skills li {
+    list-style: disc inside;
   }
   #menu-toggle {
     width: 40px;
