@@ -1,16 +1,21 @@
-# Janabaev Asadbek's Portfolio 🔥
+# 🌐 My Portfolio Website
 
-## Technologies used 🛠️
+Welcome to my personal portfolio website!  
+This project showcases my work, skills, and projects as a frontend/web developer.
 
-- **HTML** 🚀
-- **CSS** 🚀
-- **JavaScript** 🚀
-- **SASS** 🚀
+## 🚀 Live Demo
 
----
+🔗 [View it on GitHub Pages](https://asadbekdeveloper.github.io/)
 
-#### Note: 
-I'm currently looking for good **Job Opportunities** both **Remote ( Worldwide )** and **On-Site ( Anywhere in Tashkent )**. So, if you have a good opportunity that matches my skills experience then you can contact me on my **[Telegram](https://t.me/IronThrone)** or my email id **janabaevasadbek1@gmail.com** 🙌
+## 🛠️ Built With
 
+- HTML5
+- CSS3
+- JavaScript (vanilla)
 
-<br>
+## 📸 Features
+
+- Responsive layout for desktop and mobile
+- Smooth scrolling navigation
+- Project showcase section
+- About me and contact info
