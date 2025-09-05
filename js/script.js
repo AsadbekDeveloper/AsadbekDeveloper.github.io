@@ -74,25 +74,26 @@ for (let i = 0; i < selectItems.length; i++) {
 
   });
 }
-
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
+const normalize = (value) =>
+  value.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+
 const filterFunc = function (selectedValue) {
+  const normalizedValue = normalize(selectedValue);
 
   for (let i = 0; i < filterItems.length; i++) {
+    const itemCategory = normalize(filterItems[i].dataset.category);
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    if (normalizedValue === "all" || normalizedValue === itemCategory) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
+};
 
-}
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
@@ -163,29 +164,29 @@ for (let i = 0; i < navigationLinks.length; i++) {
 document.addEventListener("DOMContentLoaded", () => {
 
   function calculateDuration(startDate, endDate) {
-  const start = new Date(startDate);
-  const end = endDate === "present" ? new Date() : new Date(endDate);
+    const start = new Date(startDate);
+    const end = endDate === "present" ? new Date() : new Date(endDate);
 
-  let startYear = start.getFullYear();
-  let startMonth = start.getMonth(); // 0-indexed (Jan = 0)
-  let endYear = end.getFullYear();
-  let endMonth = end.getMonth();
+    let startYear = start.getFullYear();
+    let startMonth = start.getMonth(); // 0-indexed (Jan = 0)
+    let endYear = end.getFullYear();
+    let endMonth = end.getMonth();
 
-  let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth) + 1; // +1 to make it inclusive
+    let totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth) + 1; // +1 to make it inclusive
 
-  const years = Math.floor(totalMonths / 12);
-  const months = totalMonths % 12;
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
 
-  let duration = "";
-  if (years > 0) {
-    duration += `${years} yr${years > 1 ? "s" : ""}`;
+    let duration = "";
+    if (years > 0) {
+      duration += `${years} yr${years > 1 ? "s" : ""}`;
+    }
+    if (months > 0) {
+      if (duration) duration += ", ";
+      duration += `${months} mo${months > 1 ? "s" : ""}`;
+    }
+    return duration;
   }
-  if (months > 0) {
-    if (duration) duration += ", ";
-    duration += `${months} mo${months > 1 ? "s" : ""}`;
-  }
-  return duration;
-}
 
 
   function updateDurations() {
